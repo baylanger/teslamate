@@ -1,0 +1,25 @@
+$ sudo su -
+# cd /volume1/@docker
+# mkdir acme; chmod 700 acme # for traefik (proxy)
+# vi .env
+  :set noautoindent
+  PASTE your file content
+  :wq
+# vi docker-compose.yml
+  :set noautoindent
+  PASTE your file content
+  :wq
+# vi .htpasswd
+  PASTE your password
+
+
+### Open bash shell in postgres container
+
+# docker exec -it teslamate_postgres /bin/bash
+
+# root@XXXXXXXX:/# createdb teslamate -U teslamate
+# root@XXXXXXXX:/# createdb teslamate -U teslamate
+# root@XXXXXXXX:/# psql teslamate -U teslamate
+teslamate=# ALTER USER teslamate WITH PASSWORD 'SOMEPASSPWORD';
+teslamate=# exit
+
